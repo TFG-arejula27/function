@@ -1,0 +1,15 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  pymemo:
+    lang: pymemo
+    handler: ./pymemo
+    image: arejula27/pymemo:latest
+    environment:
+      write_debug: true
+      combine_output: false
+      exec_timeout: "5m"
+      read_timeout: "5m"
+      write_timeout: "5m"
