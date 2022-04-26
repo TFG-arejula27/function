@@ -34,11 +34,12 @@ from   function.lib_time import *
 #
 # General parameters
 #
+workdir="/home/app/function/"
 
-bin_model = "./model/google/bvlc_googlenet.caffemodel"
-protxt    = "./model/google/bvlc_googlenet.prototxt"
-cls_model = "./model/google/classification_classes_ILSVRC2012.txt"
-threshold = 127
+bin_model = workdir+"model/google/bvlc_googlenet.caffemodel"
+protxt    = workdir+"model/google/bvlc_googlenet.prototxt"
+cls_model = workdir+"model/google/classification_classes_ILSVRC2012.txt"
+
 
 
 #
@@ -169,7 +170,7 @@ def handle(argv):
   except getopt.GetoptError:
     usage(2)
 
-  input_file_name = './assets/people-walking.mp4'
+  input_file_name= workdir+'assets/people-walking.mp4'
   for opt, arg in opts:
      if opt == '-h':
         usage(1)

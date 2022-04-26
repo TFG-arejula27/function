@@ -28,7 +28,8 @@ import datetime, time
 import numpy as np
 import cv2, yaml, imutils
 
-cls_model = "./model/google/classification_classes_ILSVRC2012.txt"
+workdir="/home/app/function/"
+cls_model = workdir+"model/google/classification_classes_ILSVRC2012.txt"
 
 '''
 MEMO: reset memoization
